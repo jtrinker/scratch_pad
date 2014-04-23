@@ -7,7 +7,8 @@ class App.Routers.ScratchPadRouter extends Backbone.Router
 		'notes/:id': 'showNote'
 
 	index: ->
-		alert("You requested the index page")
+		view = new App.Views.Notes(collection: App.AllNotes)
+		$('#container').html(view.render().el)
 
 	showNote: (id) ->
 		alert("You requested the note with the id of #{id}")
