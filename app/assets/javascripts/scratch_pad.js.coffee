@@ -4,8 +4,9 @@ window.ScratchPad =
   Views: {}
   Routers: {}
   initialize: -> 
-  	alert('Hello from Backbone!')
 
+
+# save to app variable
 window.app = window.ScratchPad
 
 $(document).ready ->
