@@ -4,10 +4,11 @@ window.ScratchPad =
   Views: {}
   Routers: {}
   initialize: -> 
-
+  	new @Routers.ScratchPadRouter
+  	Backbone.history.start(pushState: true) # pushStste: true alloews us to not use the hash segment
 
 # save to app variable
-window.app = window.ScratchPad
+window.App = window.ScratchPad
 
 $(document).ready ->
   ScratchPad.initialize()
