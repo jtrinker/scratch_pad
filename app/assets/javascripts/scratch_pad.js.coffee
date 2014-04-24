@@ -10,7 +10,7 @@ window.ScratchPad =
 			{ id: 3, title: "This is not important.", content: "Go make a BM!" }
   	]
   	new @Routers.ScratchPadRouter
-  	Backbone.history.start(pushState: true) # pushStste: true alloews us to not use the hash segment
+  	Backbone.history.start(pushState: true, hashChange: false) # pushState: true allows us to not use the hash segment
 
 # save to app variable
 window.App = window.ScratchPad

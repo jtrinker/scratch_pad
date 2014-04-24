@@ -11,4 +11,7 @@ class App.Routers.ScratchPadRouter extends Backbone.Router
 		$('#container').html(view.render().el)
 
 	showNote: (id) ->
-		alert("You requested the note with the id of #{id}")
+		# coming from scratch_pad.js this.AllNotes array
+		model = App.AllNotes[id - 1]
+		view = new App.Views.EditNote(model: model)
+		$('#container').html(view.render().el)
